@@ -1,0 +1,45 @@
+CREATE TABLE users (
+	firstname VARCHAR(32) NOT NULL,
+	lastname VARCHAR(32) NOT NULL,
+	username VARCHAR(32) NOT NULL,
+	password VARCHAR(32) NOT NULL,
+	salt1 CHAR(5), 
+	salt2 CHAR(5), 
+	PRIMARY KEY(username)
+)
+
+CREATE TABLE translation (
+	tID int NOT NULL, 
+	username VARCHAR(32) NOT NULL,
+	translation ???,
+	PRIMARY KEY(tID), 
+	FOREIGN KEY(username) REFERENCES users(username)
+)
+
+
+
+
+main
+
+user
+- input text
+- sign up
+- sign in 
+
+sign up 
+authenticate
+
+known user 
+- retreive a model
+- input text
+
+
+++++
+
+translation
+- default model
+- model from user 
+
+engine
+- interpret file and store in db 
+- apply translation to text 
